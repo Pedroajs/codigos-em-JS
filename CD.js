@@ -1,15 +1,19 @@
 class CD extends Media{
-    constructor(isCheckedOut,rattings,title,artist,song){
-        super(isCheckedOut,title,rattings);
+    constructor(title,artist){
+        super(title);
         this._artist = artist;
-        this._song  = song;
+        this._songs = [];
     }
 
     get artist(){
-        return  this._artist;
+        return this._artist;
     }
 
     get song(){
-        return  this._song;
+        return this._song;
+    }
+
+    shuffle(){
+        return this._songs.sort()
     }
 }

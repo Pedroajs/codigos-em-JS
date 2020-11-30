@@ -21,12 +21,6 @@ class Media{
       }
 
     toggleCheckOutStatus(){
-    //  if(this._isCheckedOut === true){
-    //      this._isCheckedOut = false;
-    //  }else if(this._isCheckedOut === false){
-    //      this._isCheckedOut = true;
-    //  }
-
     this._isCheckedOut != this._isCheckedOut;
     }
 
@@ -40,6 +34,11 @@ class Media{
 
 
     addRating(rating){
-        this._ratings.push(rating);
+
+        if(rating >=1 || rating <= 5){
+            this._ratings.push(rating);
+        } else{
+            alert('O rating precisa ser uma nota entre 1 e 5');
+        }
     }
 }
